@@ -126,5 +126,11 @@ namespace RestaurantEsemka
             ViewOrder vo = new ViewOrder();
             vo.ShowDialog();
         }
+
+        private void pAYMENTToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Payment payment = new Payment();
+            payment.ShowDialog();
+        }
     }
 }

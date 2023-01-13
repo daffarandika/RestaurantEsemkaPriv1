@@ -32,6 +32,7 @@
             this.cbxOrderID = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.detailid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Qty = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cbxStatus = new System.Windows.Forms.DataGridViewComboBoxColumn();
@@ -42,6 +43,7 @@
             // 
             this.dgvOrder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvOrder.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.detailid,
             this.menu,
             this.Qty,
             this.cbxStatus});
@@ -49,6 +51,7 @@
             this.dgvOrder.Name = "dgvOrder";
             this.dgvOrder.Size = new System.Drawing.Size(651, 280);
             this.dgvOrder.TabIndex = 0;
+            this.dgvOrder.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.dgvOrder_EditingControlShowing);
             // 
             // cbxOrderID
             // 
@@ -78,6 +81,12 @@
             this.label2.Size = new System.Drawing.Size(228, 25);
             this.label2.TabIndex = 3;
             this.label2.Text = "FORM VIEW ORDERS";
+            // 
+            // detailid
+            // 
+            this.detailid.HeaderText = "detailid";
+            this.detailid.Name = "detailid";
+            this.detailid.Visible = false;
             // 
             // menu
             // 
@@ -119,6 +128,7 @@
         private System.Windows.Forms.ComboBox cbxOrderID;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn detailid;
         private System.Windows.Forms.DataGridViewTextBoxColumn menu;
         private System.Windows.Forms.DataGridViewTextBoxColumn Qty;
         private System.Windows.Forms.DataGridViewComboBoxColumn cbxStatus;

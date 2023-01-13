@@ -22,19 +22,12 @@ namespace RestaurantEsemka
         private void ViewOrder_Load(object sender, EventArgs e)
         {
             cbxOrderID.Fill("select * from headorder", "orderid", "orderid");
+            fillCbxStatus();
         }
-        // select * from status
 
         void fillCbxStatus()
         {
-            DataTable dt = new DataTable();
-            using (var conn = new SqlConnection(Vars.connectionString))
-            {
-                conn.Open();
-                SqlCommand cmd = new SqlCommand("select * from status", conn);
-                SqlDataReader reader = cmd.ExecuteReader();
-                
-            }
+            cbxStatus.Fill(new string[] {"pending", "cooking", "delivered"});
         }
         private void cbxOrderID_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -44,7 +37,34 @@ namespace RestaurantEsemka
 
         void fillDGV()
         {
-            dgvOrder.Fill("select menu.name as menu, detailorder.qty, detailorder.status, orderid from detailorder join menu on detailorder.menuid = menu.menuid where orderid = '"+orderid+"'", new string[] { "orderid" });
+            using (var conn = new SqlConnection(Vars.connectionString))
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("select detailid, menu.name as menu, detailorder.qty, detailorder.status, orderid from detailorder join menu on detailorder.menuid = menu.menuid where orderid = '"+orderid+"'", conn);
+                SqlDataReader reader = cmd.ExecuteReader();
+                dgvOrder.Rows.Clear();
+                while (reader.Read())
+                {
+                    dgvOrder.Rows.Add(reader["detailid"], reader["menu"], reader["qty"], reader["status"]);
+                }
+            }
+        }
+
+        private void dgvOrder_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
+        {
+            ComboBox box = (ComboBox)e.Control;
+            if (box != null)
+            {
+                box.SelectedIndexChanged -= cbxStatusChanged;
+                box.SelectedIndexChanged += cbxStatusChanged;
+            }
+        }
+
+        private void cbxStatusChanged(object sender, EventArgs e)
+        {
+            string status = ((ComboBox)sender).Text.ToString();
+            string detailid = dgvOrder.CurrentRow.Cells[0].Value.ToString();
+            Helper.runQuery("update detailorder set status = '" + status + "' where detailid = '" + detailid + "' ");
         }
     }
 }

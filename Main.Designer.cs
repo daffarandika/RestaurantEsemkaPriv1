@@ -113,7 +113,7 @@
             // mEMBERToolStripMenuItem
             // 
             this.mEMBERToolStripMenuItem.Name = "mEMBERToolStripMenuItem";
-            this.mEMBERToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.mEMBERToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
             this.mEMBERToolStripMenuItem.Text = "MEMBER";
             this.mEMBERToolStripMenuItem.Click += new System.EventHandler(this.mEMBERToolStripMenuItem_Click);
             // 
@@ -135,7 +135,7 @@
             // vIEWORDERToolStripMenuItem
             // 
             this.vIEWORDERToolStripMenuItem.Name = "vIEWORDERToolStripMenuItem";
-            this.vIEWORDERToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.vIEWORDERToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.vIEWORDERToolStripMenuItem.Text = "VIEW ORDER";
             this.vIEWORDERToolStripMenuItem.Click += new System.EventHandler(this.vIEWORDERToolStripMenuItem_Click);
             // 
@@ -158,8 +158,9 @@
             // pAYMENTToolStripMenuItem
             // 
             this.pAYMENTToolStripMenuItem.Name = "pAYMENTToolStripMenuItem";
-            this.pAYMENTToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
+            this.pAYMENTToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.pAYMENTToolStripMenuItem.Text = "PAYMENT";
+            this.pAYMENTToolStripMenuItem.Click += new System.EventHandler(this.pAYMENTToolStripMenuItem_Click);
             // 
             // rEPORTToolStripMenuItem
             // 

@@ -50,6 +50,7 @@ namespace RestaurantEsemka
             dgv.AllowUserToAddRows = false;
             dgv.ReadOnly = true;
             dgv.SelectionMode= DataGridViewSelectionMode.FullRowSelect;
+            dgv.RowHeadersVisible= false;
         }
 
         public static void Fill(this DataGridView dgv, string query)
@@ -84,6 +85,18 @@ namespace RestaurantEsemka
             }
             cbx.SelectedIndex = -1;
         }
+        public static void Fill(this DataGridViewComboBoxColumn cbx, string[] rows)
+        {
+            if (cbx.Items.Count > 0)
+            {
+                cbx.Items.Clear();
+            }
+            foreach (string s in rows)
+            {
+                cbx.Items.Add(s);
+            }
+        }
+
         public static void Fill(this ComboBox cbx, string[] rows)
         {
             if (cbx.Items.Count > 0)

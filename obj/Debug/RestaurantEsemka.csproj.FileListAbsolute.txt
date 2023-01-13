@@ -16,3 +16,5 @@ C:\Users\ASUS\source\repos\RestaurantEsemka\obj\Debug\RestaurantEsemka.Member.re
 C:\Users\ASUS\source\repos\RestaurantEsemka\obj\Debug\RestaurantEsemka.PreOrder.resources
 C:\Users\ASUS\source\repos\RestaurantEsemka\obj\Debug\RestaurantEsemka.Order.resources
 C:\Users\ASUS\source\repos\RestaurantEsemka\obj\Debug\RestaurantEsemka.ViewOrder.resources
+C:\Users\ASUS\source\repos\RestaurantEsemka\obj\Debug\RestaurantEsemka.Payment.resources
+C:\Users\ASUS\source\repos\RestaurantEsemka\obj\Debug\RestaurantEsemka.Kuitansi.resources
