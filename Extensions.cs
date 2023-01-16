@@ -71,6 +71,7 @@ namespace RestaurantEsemka
 
         public static void Fill(this ComboBox cbx, string command, string displayMember, string valueMember)
         {
+            cbx.DataSource = null;
             DataTable dt = new DataTable();
             using (var conn = new SqlConnection(Vars.connectionString))
             {
@@ -96,6 +97,29 @@ namespace RestaurantEsemka
                 cbx.Items.Add(s);
             }
         }
+        public static void Fill(this ComboBox cbx, string[] displayMembers, string[] valueMembers)
+        {
+            if (displayMembers.Length != valueMembers.Length)
+            {
+                throw new ArgumentException("Length of both arrays must be the same");
+            }
+            if (cbx.Items.Count > 0)
+            {
+                cbx.DataSource = null;
+            }
+            DataTable dt = new DataTable();
+            dt.Columns.Add("display");
+            dt.Columns.Add("value");
+            for (int i = 0; i < valueMembers.Length; i++)
+            {
+                dt.Rows.Add(displayMembers[i], valueMembers[i]);
+            }
+            cbx.DataSource = dt;
+            cbx.DisplayMember = "display";
+            cbx.ValueMember = "value";
+            cbx.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbx.SelectedIndex = -1;
+        }
 
         public static void Fill(this ComboBox cbx, string[] rows)
         {
@@ -108,6 +132,26 @@ namespace RestaurantEsemka
                 cbx.Items.Add(s);
             }
             cbx.DropDownStyle = ComboBoxStyle.DropDownList;
+        }
+        public static bool validatePhoneNumber (this TextBox textBox)
+        {
+            bool res = true;
+            if (!Vars.pRegex.IsMatch(textBox.Text))
+            {
+                res = false;
+                textBox.showError("Invalid phone number");
+            }
+            return res;
+        }
+        public static bool validateEmail (this TextBox textBox)
+        {
+            bool res = true;
+            if (!textBox.Text.Contains('@'))
+            {
+                res = false;
+                textBox.showError("Invalid E-mail");
+            }
+            return res;
         }
     }
 }

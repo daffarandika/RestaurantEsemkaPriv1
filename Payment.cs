@@ -13,8 +13,10 @@ namespace RestaurantEsemka
     public partial class Payment : Form
     {
         List<string> foods= new List<string>();
+        List<string> prices= new List<string>();
         List<string> qtys= new List<string>();
         List<string> totals= new List<string>();
+        string orderid;
         public Payment()
         {
             InitializeComponent();
@@ -22,13 +24,14 @@ namespace RestaurantEsemka
 
         private void Payment_Load(object sender, EventArgs e)
         {
-            cbxOrderID.Fill("select * from headorder", "orderid", "orderid");
+            cbxOrderID.Fill("select * from headorder where payment = '0'", "orderid", "orderid");
+            cbxMetode.Fill(new string[] { "cash", "debit", "credit" });
         }
 
         private void cbxOrderID_SelectedIndexChanged(object sender, EventArgs e)
         {
             int total = 0;
-            string orderid = cbxOrderID.Text;
+            orderid = cbxOrderID.Text;
             dgvPayment.Fill("select menu.name as menu, orderid, qty, detailorder.price from detailorder join menu on detailorder.menuid = menu.menuid where orderid = '" + orderid + "'");
             dgvPayment.Columns["orderid"].Visible= false;
             if (dgvPayment.Columns.Contains("total"))
@@ -46,27 +49,58 @@ namespace RestaurantEsemka
 
         private void tbnSave_Click(object sender, EventArgs e)
         {
-            int bayar = Convert.ToInt32(tbBayar.Text);
-            int total = Convert.ToInt32(lblTotal.Text);
-            int kembali = bayar - total;
-            if (kembali < 0)
-            {
-                MessageBox.Show("Uang yang diterima kurang dari total", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            tbKembali.Text = kembali.ToString();
         }
 
         private void btnKuitansi_Click(object sender, EventArgs e)
         {
-            foreach (DataGridViewRow r in dgvPayment.Rows)
+            //if (tbBayar.Text.Length == 0)
+            //{
+            //    tbBayar.showError("input cannot be empty");
+            //    return;
+            //}
+            //foreach (DataGridViewRow r in dgvPayment.Rows)
+            //{
+            //    foods.Add(r.Cells["menu"].Value.ToString());
+            //    prices.Add(r.Cells["price"].Value.ToString());
+            //    qtys.Add(r.Cells["qty"].Value.ToString());
+            //    totals.Add(r.Cells["total"].Value.ToString());
+            //}
+            //Kuitansi kuitansi= new Kuitansi(foods, prices, qtys, totals);
+            //kuitansi.ShowDialog();
+        }
+
+        private void cbxMetode_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbxOrderID.SelectedIndex == -1)
             {
-                foods.Add(r.Cells["menu"].Value.ToString());
-                qtys.Add(r.Cells["qty"].Value.ToString());
-                totals.Add(r.Cells["total"].Value.ToString());
+                MessageBox.Show("There are no transaction to be made for this order", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
-            Kuitansi kuitansi= new Kuitansi(foods, qtys, totals);
-            kuitansi.ShowDialog();
+            if (dgvPayment.Rows.Count < 1)
+            {
+                MessageBox.Show("Select the order ID first!!", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            TunaiUC tunai = new TunaiUC();
+            NonTunaiUC nonTunai = new NonTunaiUC();
+            tunai.total = Convert.ToInt32(lblTotal.Text);
+            tunai.orderID = orderid;
+            nonTunai.total = Convert.ToInt32(lblTotal.Text);
+            nonTunai.orderID = orderid;
+            nonTunai.payment = cbxMetode.Text;
+
+            if (cbxMetode.SelectedIndex == 0)
+            {
+                panel1.Controls.Clear();
+                panel1.Controls.Add(tunai);
+            } else if (cbxMetode.SelectedIndex == 1 || cbxMetode.SelectedIndex == 2)
+            {
+                panel1.Controls.Clear();
+                panel1.Controls.Add(nonTunai);
+            } else
+            {
+                panel1.Controls.Clear();
+            }
         }
     }
 }

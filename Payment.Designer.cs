@@ -30,17 +30,12 @@
         {
             this.dgvPayment = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.cbxMetode = new System.Windows.Forms.ComboBox();
-            this.tbBayar = new System.Windows.Forms.TextBox();
-            this.tbKembali = new System.Windows.Forms.TextBox();
             this.tota = new System.Windows.Forms.Label();
             this.lblTotal = new System.Windows.Forms.Label();
-            this.tbnSave = new System.Windows.Forms.Button();
             this.cbxOrderID = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.btnKuitansi = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPayment)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,24 +56,6 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Metode";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(62, 337);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(34, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Bayar";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(62, 363);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 13);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Kembali";
-            // 
             // cbxMetode
             // 
             this.cbxMetode.FormattingEnabled = true;
@@ -86,21 +63,7 @@
             this.cbxMetode.Name = "cbxMetode";
             this.cbxMetode.Size = new System.Drawing.Size(218, 21);
             this.cbxMetode.TabIndex = 4;
-            this.cbxMetode.Text = "Tunai";
-            // 
-            // tbBayar
-            // 
-            this.tbBayar.Location = new System.Drawing.Point(114, 334);
-            this.tbBayar.Name = "tbBayar";
-            this.tbBayar.Size = new System.Drawing.Size(218, 20);
-            this.tbBayar.TabIndex = 5;
-            // 
-            // tbKembali
-            // 
-            this.tbKembali.Location = new System.Drawing.Point(114, 360);
-            this.tbKembali.Name = "tbKembali";
-            this.tbKembali.Size = new System.Drawing.Size(218, 20);
-            this.tbKembali.TabIndex = 6;
+            this.cbxMetode.SelectedIndexChanged += new System.EventHandler(this.cbxMetode_SelectedIndexChanged);
             // 
             // tota
             // 
@@ -120,16 +83,6 @@
             this.lblTotal.TabIndex = 8;
             this.lblTotal.Text = "0";
             // 
-            // tbnSave
-            // 
-            this.tbnSave.Location = new System.Drawing.Point(114, 402);
-            this.tbnSave.Name = "tbnSave";
-            this.tbnSave.Size = new System.Drawing.Size(75, 23);
-            this.tbnSave.TabIndex = 9;
-            this.tbnSave.Text = "Save";
-            this.tbnSave.UseVisualStyleBackColor = true;
-            this.tbnSave.Click += new System.EventHandler(this.tbnSave_Click);
-            // 
             // cbxOrderID
             // 
             this.cbxOrderID.FormattingEnabled = true;
@@ -148,32 +101,24 @@
             this.label4.TabIndex = 11;
             this.label4.Text = "Order ID";
             // 
-            // btnKuitansi
+            // panel1
             // 
-            this.btnKuitansi.Location = new System.Drawing.Point(195, 402);
-            this.btnKuitansi.Name = "btnKuitansi";
-            this.btnKuitansi.Size = new System.Drawing.Size(75, 23);
-            this.btnKuitansi.TabIndex = 12;
-            this.btnKuitansi.Text = "Kuitansi";
-            this.btnKuitansi.UseVisualStyleBackColor = true;
-            this.btnKuitansi.Click += new System.EventHandler(this.btnKuitansi_Click);
+            this.panel1.Location = new System.Drawing.Point(53, 331);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(369, 108);
+            this.panel1.TabIndex = 13;
             // 
             // Payment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnKuitansi);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.cbxOrderID);
-            this.Controls.Add(this.tbnSave);
             this.Controls.Add(this.lblTotal);
             this.Controls.Add(this.tota);
-            this.Controls.Add(this.tbKembali);
-            this.Controls.Add(this.tbBayar);
             this.Controls.Add(this.cbxMetode);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvPayment);
             this.Name = "Payment";
@@ -190,16 +135,11 @@
 
         private System.Windows.Forms.DataGridView dgvPayment;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cbxMetode;
-        private System.Windows.Forms.TextBox tbBayar;
-        private System.Windows.Forms.TextBox tbKembali;
         private System.Windows.Forms.Label tota;
         private System.Windows.Forms.Label lblTotal;
-        private System.Windows.Forms.Button tbnSave;
         private System.Windows.Forms.ComboBox cbxOrderID;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button btnKuitansi;
+        private System.Windows.Forms.Panel panel1;
     }
 }

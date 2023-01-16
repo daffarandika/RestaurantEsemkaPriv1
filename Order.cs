@@ -15,26 +15,34 @@ namespace RestaurantEsemka
     {
         string targetDir;
         string windowsUsername = Environment.UserName;
-        Control[] inputFields;
+        TextBox[] inputFields;
         List<string> addedMenu = new List<string>();
         List<string> detailOrderQueries = new List<string>();
-        string orderid = "";
 
         public Order()
         {
+            string orderid = getOrderID();
             InitializeComponent();
             targetDir = @"C:\Users\" + windowsUsername + @"\Desktop\Restaurant Esemka\Images";
-            inputFields = new Control[]
+            inputFields = new TextBox[]
             {
                 tbName, tbPrice, tbQty
             };
+        }
+
+        private string getOrderID()
+        {
             string year = DateTime.Now.ToString("yyyy");
             string monthNum = DateTime.Now.ToString("MM");
-            orderid = year + monthNum + "0001";
+            string orderid = year + monthNum + "0001";
+            if (!Helper.hasRows("select * from income"))
+            {
+                return orderid;
+            }
             string max = Helper.getValueFromSql("select max(orderid) as max from headorder", "max");
-            orderid = (Convert.ToInt32(max) > Convert.ToInt32(orderid)) ? (Convert.ToInt32(max) + 1).ToString() : orderid;
+            return (Convert.ToInt32(max) >= Convert.ToInt32(orderid)) ? (Convert.ToInt32(max) + 1).ToString() : orderid;
         }
-       
+
         void fillDGVMenu()
         {
             dgvMenu.Fill("select * from menu order by name", new string[] {"menuid", "photo"});
@@ -71,10 +79,12 @@ namespace RestaurantEsemka
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            if (Helper.areTextBoxesEmpty(inputFields)) return;
             string menuid = dgvMenu.CurrentRow.Cells["menuid"].Value.ToString();
             string menuName = dgvMenu.CurrentRow.Cells["name"].Value.ToString();
             string qty = tbQty.Text;
             string price = tbPrice.Text;
+            string orderid = getOrderID();
             string total = Convert.ToString(Convert.ToInt32(qty) * Convert.ToInt32(price));
             if (!addedMenu.Contains(tbName.Text))
             {
@@ -107,10 +117,20 @@ namespace RestaurantEsemka
 
         private void btnOrder_Click(object sender, EventArgs e)
         {
+            if (dgvOrder.Rows.Count < 1)
+            {
+                MessageBox.Show("Add an order from the table above first!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            string orderid = getOrderID();
             string year = DateTime.Now.ToString("yyyy");
-            string month = DateTime.Now.ToString("MMM");
+            string month = DateTime.Now.ToString("MM");
+            if (!IncomeManager.monthEntryExists(year, month))
+            {
+                IncomeManager.newEntry(year, month);
+            } 
             IncomeManager.updateEntry(year, month, lblTotal.Text);
-            Helper.runQuery("insert into headorder values('" + orderid + "', '" + Vars.employeeID + "', '" + Vars.memberID + "', '" + DateTime.Now.ToString("yyyy-MM-dd") + "', 'cash', '0')");
+            Helper.runQuery("insert into headorder values('" + orderid + "', '" + Vars.employeeID + "', '" + Vars.memberID + "', '" + DateTime.Now.ToString("yyyy-MM-dd") + "', '0', '0')");
             foreach (string s in detailOrderQueries)
             {
                 Helper.runQuery(s);
@@ -123,7 +143,17 @@ namespace RestaurantEsemka
         private void btnCancel_Click(object sender, EventArgs e)
         {
             string max = Helper.getValueFromSql("select max(orderid) as max from headorder", "max");
-            MessageBox.Show(max);
+            MessageBox.Show(max, "Order ID", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbPrice_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -105,6 +106,24 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report.Designer.cs">
+      <DependentUpon>Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TunaiUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TunaiUC.Designer.cs">
+      <DependentUpon>TunaiUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NonTunaiUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NonTunaiUC.Designer.cs">
+      <DependentUpon>NonTunaiUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vars.cs" />
     <Compile Include="ViewOrder.cs">
       <SubType>Form</SubType>
@@ -130,6 +149,9 @@
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="NonTunaiUC.resx">
+      <DependentUpon>NonTunaiUC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Order.resx">
       <DependentUpon>Order.cs</DependentUpon>
     </EmbeddedResource>
@@ -148,6 +170,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Report.resx">
+      <DependentUpon>Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TunaiUC.resx">
+      <DependentUpon>TunaiUC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ViewOrder.resx">
       <DependentUpon>ViewOrder.cs</DependentUpon>
     </EmbeddedResource>

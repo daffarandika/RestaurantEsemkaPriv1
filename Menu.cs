@@ -16,13 +16,13 @@ namespace RestaurantEsemka
         string windowsUsername = Environment.UserName;
         string targetDir;
         string FileName;
-        Control[] inputFields;
+        TextBox[] inputFields;
         bool changeImage = false;
         public Menu()
         {
             InitializeComponent();
             targetDir = @"C:\Users\" + windowsUsername + @"\Desktop\Restaurant Esemka\Images";
-            inputFields = new Control[]
+            inputFields = new TextBox[]
             {
                 tbID, tbName, tbPhoto, tbPrice
             };
@@ -54,6 +54,7 @@ namespace RestaurantEsemka
 
         private void btnInsert_Click(object sender, EventArgs e)
         {
+            if (Helper.areTextBoxesEmpty(inputFields)) return;
             Directory.CreateDirectory(targetDir);
             File.Copy(
                 FileName,

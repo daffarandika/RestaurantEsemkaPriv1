@@ -132,5 +132,11 @@ namespace RestaurantEsemka
             Payment payment = new Payment();
             payment.ShowDialog();
         }
+
+        private void rEPORTToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Report report = new Report();
+            report.ShowDialog();
+        }
     }
 }

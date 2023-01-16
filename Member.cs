@@ -12,11 +12,11 @@ namespace RestaurantEsemka
 {
     public partial class Member : Form
     {
-        Control[] inputFields;
+        TextBox[] inputFields;
         public Member()
         {
             InitializeComponent();
-            inputFields = new Control[]
+            inputFields = new TextBox  []
             {
                 tbID, tbName, tbEmail, tbHandphone
             };
@@ -46,6 +46,7 @@ namespace RestaurantEsemka
 
         private void btnInsert_Click(object sender, EventArgs e)
         {
+            if (Helper.areTextBoxesEmpty(inputFields)) return;
             string name = tbName.Text;
             string email = tbEmail.Text;
             string handphone = tbHandphone.Text;    
@@ -56,7 +57,29 @@ namespace RestaurantEsemka
 
         private void dgvMember_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            var row = dgvMember.CurrentRow;
+            tbID.Text = row.Cells["memberid"].Value.ToString();
+            tbName.Text = row.Cells["name"].Value.ToString();
+            tbEmail.Text = row.Cells["email"].Value.ToString();
+            tbHandphone.Text = row.Cells["handphone"].Value.ToString();
         }
 
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            if (Helper.areTextBoxesEmpty(inputFields)) return;
+            string memberid = tbID.Text;
+            string name = tbName.Text;
+            string email = tbEmail.Text;
+            string handphone = tbHandphone.Text;
+            Helper.runQuery("update member set name = '" + name + "', email = '" + email + "', '" + handphone + "' where memberid = '"+memberid+"'");
+            reset();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            string memberid = tbID.Text;
+            Helper.runQuery("delete from member where memberid = '" + memberid + "'");
+            reset();
+        }
     }
 }

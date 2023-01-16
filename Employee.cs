@@ -12,11 +12,11 @@ namespace RestaurantEsemka
 {
     public partial class Employee : Form
     {
-        Control[] inputFields;
+        TextBox[] inputFields;
         public Employee()
         {
             InitializeComponent();
-            inputFields = new Control[] { tbID, tbName, tbEmail, tbPassword, tbHandphone };
+            inputFields = new TextBox[] { tbID, tbName, tbEmail, tbPassword, tbHandphone };
         }
 
         private void Employee_Load(object sender, EventArgs e)
@@ -43,13 +43,37 @@ namespace RestaurantEsemka
 
         private void btnInsert_Click(object sender, EventArgs e)
         {
+            if (Helper.areTextBoxesEmpty(inputFields)) return;
+            if (!tbHandphone.validatePhoneNumber()) return;
+            if (!tbEmail.validateEmail()) return;
             string name = tbName.Text;
             string email = tbEmail.Text;
             string password = Helper.toSha256(tbPassword.Text);
             string handphone = tbHandphone.Text;
             string position = cbxPosition.Text;
-            MessageBox.Show(inputFields.Length.ToString());
             Helper.runQuery("insert into employee (name, email, password, handphone, position) values ('" + name + "', '" + email + "', '" + password + "', '" + handphone + "', '" + position + "')");
+            reset();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            string employeeid = tbID.Text;
+            Helper.runQuery("delete from employee where employeeid = '" + employeeid + "'");
+            reset();
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            if (Helper.areTextBoxesEmpty(inputFields)) return;
+            if (!tbHandphone.validatePhoneNumber()) return;
+            if (!tbEmail.validateEmail()) return;
+            string employeeid = tbID.Text;
+            string name = tbName.Text;
+            string email = tbEmail.Text;
+            string password = Helper.toSha256(tbPassword.Text);
+            string handphone = tbHandphone.Text;
+            string position = cbxPosition.Text;
+            Helper.runQuery("update employee set name = '" + name + "', email = '"+email+"', password = '" + password + "', handphone = '" + handphone + "', position = '" + position + "' where employeeid = '"+employeeid+"'");
             reset();
         }
     }

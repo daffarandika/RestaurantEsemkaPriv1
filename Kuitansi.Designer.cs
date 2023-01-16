@@ -29,20 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Kuitansi));
-            this.dgvKuitansi = new System.Windows.Forms.DataGridView();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.printDialog1 = new System.Windows.Forms.PrintDialog();
             this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvKuitansi)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dgvKuitansi
-            // 
-            this.dgvKuitansi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvKuitansi.Location = new System.Drawing.Point(12, 12);
-            this.dgvKuitansi.Name = "dgvKuitansi";
-            this.dgvKuitansi.Size = new System.Drawing.Size(302, 444);
-            this.dgvKuitansi.TabIndex = 0;
             // 
             // printPreviewDialog1
             // 
@@ -74,18 +64,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(326, 531);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.dgvKuitansi);
             this.Name = "Kuitansi";
             this.Text = "Kuitansi";
             this.Load += new System.EventHandler(this.Kuitansi_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvKuitansi)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dgvKuitansi;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
         private System.Windows.Forms.PrintDialog printDialog1;
         private System.Windows.Forms.Button button1;
