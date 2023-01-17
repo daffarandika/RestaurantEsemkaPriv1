@@ -34,7 +34,6 @@ namespace RestaurantEsemka
             chart1.Series.Clear();
             using (var conn = new SqlConnection(Vars.connectionString))
             {
-                MessageBox.Show("select * from income where id >= '" + idFrom + "' && id <= '" + idTo + "' ");
                 conn.Open();
                 SqlCommand sqlCommand = new SqlCommand("select * from income where id >= '" + idFrom + "' and id <= '" + idTo + "' ", conn);
                 SqlDataAdapter adapter = new SqlDataAdapter(sqlCommand);
