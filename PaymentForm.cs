@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace RestaurantEsemka
 {
-    public partial class Payment : Form
+    public partial class PaymentForm : Form
     {
         List<string> foods= new List<string>();
         List<string> prices= new List<string>();
         List<string> qtys= new List<string>();
         List<string> totals= new List<string>();
         string orderid;
-        public Payment()
+        public PaymentForm()
         {
             InitializeComponent();
         }

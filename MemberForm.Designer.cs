@@ -1,6 +1,6 @@
 ﻿namespace RestaurantEsemka
 {
-    partial class Member
+    partial class MemberForm
     {
         /// <summary>
         /// Required designer variable.
@@ -40,22 +40,23 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnInsert = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMember)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvMember
             // 
             this.dgvMember.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMember.Location = new System.Drawing.Point(12, 12);
+            this.dgvMember.Location = new System.Drawing.Point(19, 72);
             this.dgvMember.Name = "dgvMember";
-            this.dgvMember.Size = new System.Drawing.Size(628, 248);
+            this.dgvMember.Size = new System.Drawing.Size(628, 223);
             this.dgvMember.TabIndex = 0;
             this.dgvMember.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMember_CellClick);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(128, 282);
+            this.label1.Location = new System.Drawing.Point(137, 309);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(59, 13);
             this.label1.TabIndex = 1;
@@ -63,14 +64,14 @@
             // 
             // tbID
             // 
-            this.tbID.Location = new System.Drawing.Point(191, 279);
+            this.tbID.Location = new System.Drawing.Point(200, 306);
             this.tbID.Name = "tbID";
             this.tbID.Size = new System.Drawing.Size(303, 20);
             this.tbID.TabIndex = 2;
             // 
             // tbName
             // 
-            this.tbName.Location = new System.Drawing.Point(191, 305);
+            this.tbName.Location = new System.Drawing.Point(200, 332);
             this.tbName.Name = "tbName";
             this.tbName.Size = new System.Drawing.Size(303, 20);
             this.tbName.TabIndex = 4;
@@ -78,7 +79,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(128, 308);
+            this.label2.Location = new System.Drawing.Point(137, 335);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(35, 13);
             this.label2.TabIndex = 3;
@@ -86,7 +87,7 @@
             // 
             // tbEmail
             // 
-            this.tbEmail.Location = new System.Drawing.Point(191, 331);
+            this.tbEmail.Location = new System.Drawing.Point(200, 358);
             this.tbEmail.Name = "tbEmail";
             this.tbEmail.Size = new System.Drawing.Size(303, 20);
             this.tbEmail.TabIndex = 6;
@@ -94,7 +95,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(128, 334);
+            this.label3.Location = new System.Drawing.Point(137, 361);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(32, 13);
             this.label3.TabIndex = 5;
@@ -102,7 +103,7 @@
             // 
             // tbHandphone
             // 
-            this.tbHandphone.Location = new System.Drawing.Point(191, 357);
+            this.tbHandphone.Location = new System.Drawing.Point(200, 384);
             this.tbHandphone.Name = "tbHandphone";
             this.tbHandphone.Size = new System.Drawing.Size(303, 20);
             this.tbHandphone.TabIndex = 8;
@@ -110,7 +111,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(128, 360);
+            this.label4.Location = new System.Drawing.Point(137, 387);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(38, 13);
             this.label4.TabIndex = 7;
@@ -118,7 +119,7 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(370, 394);
+            this.btnDelete.Location = new System.Drawing.Point(379, 421);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(75, 23);
             this.btnDelete.TabIndex = 17;
@@ -128,7 +129,7 @@
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(283, 394);
+            this.btnUpdate.Location = new System.Drawing.Point(292, 421);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(75, 23);
             this.btnUpdate.TabIndex = 16;
@@ -138,7 +139,7 @@
             // 
             // btnInsert
             // 
-            this.btnInsert.Location = new System.Drawing.Point(191, 394);
+            this.btnInsert.Location = new System.Drawing.Point(200, 421);
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.Size = new System.Drawing.Size(75, 23);
             this.btnInsert.TabIndex = 15;
@@ -146,11 +147,22 @@
             this.btnInsert.UseVisualStyleBackColor = true;
             this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(214, 26);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(229, 25);
+            this.label5.TabIndex = 18;
+            this.label5.Text = "Form Manage Member";
+            // 
             // Member
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(659, 478);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnInsert);
@@ -187,5 +199,6 @@
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnInsert;
+        private System.Windows.Forms.Label label5;
     }
 }

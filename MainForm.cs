@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace RestaurantEsemka
 {
-    public partial class Main : Form
+    public partial class MainForm : Form
     {
         private void Main_Load(object sender, EventArgs e)
         {
@@ -47,17 +47,17 @@ namespace RestaurantEsemka
                 t.Enabled = false;
             }
         }
-        public Main()
+        public MainForm()
         {
             InitializeComponent();
         }
         
         private void loginToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Login login = new Login();
+            LoginForm login = new LoginForm();
             login.ShowDialog();
             Hide();
-            Main main= new Main();
+            MainForm main= new MainForm();
             main.ShowDialog();
             Close();
         }
@@ -70,7 +70,7 @@ namespace RestaurantEsemka
                 Vars.employeeID = "";
                 Vars.employeeRole = "";
                 Hide();
-                Main main = new Main(); 
+                MainForm main = new MainForm(); 
                 main.ShowDialog();
                 Close();
             }
@@ -87,55 +87,55 @@ namespace RestaurantEsemka
 
         private void kARYAWANToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Employee employee = new Employee();
+            EmployeeForm employee = new EmployeeForm();
             employee.ShowDialog();
         }
 
         private void mENURESTOToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Menu menu = new Menu();
+            MenuForm menu = new MenuForm();
             menu.ShowDialog();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string max = Helper.getValueFromSql("select max(orderid) as max from headorder", "max");
+            string max = Helper.getValueFromSql("select max(_orderid) as max from headorder", "max");
             max = (Convert.ToInt32(max) + 1).ToString();
             MessageBox.Show(max.Length.ToString());
         }
 
         private void mEMBERToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Member member= new Member();
+            MemberForm member= new MemberForm();
             member.ShowDialog();
         }
 
         private void oRDERToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            PreOrder po = new PreOrder();
+            PreOrderForm po = new PreOrderForm();
             po.ShowDialog();
             if (po.DialogResult != DialogResult.Cancel)
             {
-                Order order = new Order();
+                OrderForm order = new OrderForm();
                 order.ShowDialog();
             } 
         }
 
         private void vIEWORDERToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ViewOrder vo = new ViewOrder();
+            ViewOrderForm vo = new ViewOrderForm();
             vo.ShowDialog();
         }
 
         private void pAYMENTToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Payment payment = new Payment();
+            PaymentForm payment = new PaymentForm();
             payment.ShowDialog();
         }
 
         private void rEPORTToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Report report = new Report();
+            ReportForm report = new ReportForm();
             report.ShowDialog();
         }
     }

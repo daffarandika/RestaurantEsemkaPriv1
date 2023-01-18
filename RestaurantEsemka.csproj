@@ -47,70 +47,69 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Employee.cs">
+    <Compile Include="EmployeeForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Employee.Designer.cs">
-      <DependentUpon>Employee.cs</DependentUpon>
+    <Compile Include="EmployeeForm.Designer.cs">
+      <DependentUpon>EmployeeForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Extensions.cs" />
     <Compile Include="Helper.cs" />
-    <Compile Include="IncomeManager.cs" />
-    <Compile Include="Kuitansi.cs">
+    <Compile Include="KuitansiForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Kuitansi.Designer.cs">
-      <DependentUpon>Kuitansi.cs</DependentUpon>
+    <Compile Include="KuitansiForm.Designer.cs">
+      <DependentUpon>KuitansiForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login.cs">
+    <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login.Designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Main.cs">
+    <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Main.Designer.cs">
-      <DependentUpon>Main.cs</DependentUpon>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Member.cs">
+    <Compile Include="MemberForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Member.Designer.cs">
-      <DependentUpon>Member.cs</DependentUpon>
+    <Compile Include="MemberForm.Designer.cs">
+      <DependentUpon>MemberForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Menu.cs">
+    <Compile Include="MenuForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Menu.Designer.cs">
-      <DependentUpon>Menu.cs</DependentUpon>
+    <Compile Include="MenuForm.Designer.cs">
+      <DependentUpon>MenuForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Order.cs">
+    <Compile Include="OrderForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Order.Designer.cs">
-      <DependentUpon>Order.cs</DependentUpon>
+    <Compile Include="OrderForm.Designer.cs">
+      <DependentUpon>OrderForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Payment.cs">
+    <Compile Include="PaymentForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Payment.Designer.cs">
-      <DependentUpon>Payment.cs</DependentUpon>
+    <Compile Include="PaymentForm.Designer.cs">
+      <DependentUpon>PaymentForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="PreOrder.cs">
+    <Compile Include="PreOrderForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PreOrder.Designer.cs">
-      <DependentUpon>PreOrder.cs</DependentUpon>
+    <Compile Include="PreOrderForm.Designer.cs">
+      <DependentUpon>PreOrderForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Report.cs">
+    <Compile Include="ReportForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Report.Designer.cs">
-      <DependentUpon>Report.cs</DependentUpon>
+    <Compile Include="ReportForm.Designer.cs">
+      <DependentUpon>ReportForm.cs</DependentUpon>
     </Compile>
     <Compile Include="TunaiUC.cs">
       <SubType>UserControl</SubType>
@@ -125,41 +124,41 @@
       <DependentUpon>NonTunaiUC.cs</DependentUpon>
     </Compile>
     <Compile Include="Vars.cs" />
-    <Compile Include="ViewOrder.cs">
+    <Compile Include="ViewOrderForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ViewOrder.Designer.cs">
-      <DependentUpon>ViewOrder.cs</DependentUpon>
+    <Compile Include="ViewOrderForm.Designer.cs">
+      <DependentUpon>ViewOrderForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Employee.resx">
-      <DependentUpon>Employee.cs</DependentUpon>
+    <EmbeddedResource Include="EmployeeForm.resx">
+      <DependentUpon>EmployeeForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Kuitansi.resx">
-      <DependentUpon>Kuitansi.cs</DependentUpon>
+    <EmbeddedResource Include="KuitansiForm.resx">
+      <DependentUpon>KuitansiForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login.resx">
-      <DependentUpon>Login.cs</DependentUpon>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Main.resx">
-      <DependentUpon>Main.cs</DependentUpon>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Member.resx">
-      <DependentUpon>Member.cs</DependentUpon>
+    <EmbeddedResource Include="MemberForm.resx">
+      <DependentUpon>MemberForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Menu.resx">
-      <DependentUpon>Menu.cs</DependentUpon>
+    <EmbeddedResource Include="MenuForm.resx">
+      <DependentUpon>MenuForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NonTunaiUC.resx">
       <DependentUpon>NonTunaiUC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Order.resx">
-      <DependentUpon>Order.cs</DependentUpon>
+    <EmbeddedResource Include="OrderForm.resx">
+      <DependentUpon>OrderForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Payment.resx">
-      <DependentUpon>Payment.cs</DependentUpon>
+    <EmbeddedResource Include="PaymentForm.resx">
+      <DependentUpon>PaymentForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PreOrder.resx">
-      <DependentUpon>PreOrder.cs</DependentUpon>
+    <EmbeddedResource Include="PreOrderForm.resx">
+      <DependentUpon>PreOrderForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -170,14 +169,14 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Report.resx">
-      <DependentUpon>Report.cs</DependentUpon>
+    <EmbeddedResource Include="ReportForm.resx">
+      <DependentUpon>ReportForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TunaiUC.resx">
       <DependentUpon>TunaiUC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ViewOrder.resx">
-      <DependentUpon>ViewOrder.cs</DependentUpon>
+    <EmbeddedResource Include="ViewOrderForm.resx">
+      <DependentUpon>ViewOrderForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

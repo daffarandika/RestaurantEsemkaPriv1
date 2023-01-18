@@ -11,10 +11,10 @@ using System.Windows.Forms;
 
 namespace RestaurantEsemka
 {
-    public partial class Login : Form
+    public partial class LoginForm : Form
     {
         bool show = false;
-        public Login()
+        public LoginForm()
         {
             InitializeComponent();
             tbPassword.UseSystemPasswordChar = true;
@@ -38,6 +38,7 @@ namespace RestaurantEsemka
                 {
                     Vars.employeeID = reader["employeeid"].ToString();
                     Vars.employeeRole = reader["position"].ToString();
+                    Vars.employeeName = reader["name"].ToString();
                     Close();
                 } else
                 {

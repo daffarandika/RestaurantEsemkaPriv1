@@ -11,10 +11,10 @@ using System.Windows.Forms;
 
 namespace RestaurantEsemka
 {
-    public partial class ViewOrder : Form
+    public partial class ViewOrderForm : Form
     {
         string orderid;
-        public ViewOrder()
+        public ViewOrderForm()
         {
             InitializeComponent();
         }

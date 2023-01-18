@@ -1,6 +1,6 @@
 ﻿namespace RestaurantEsemka
 {
-    partial class ViewOrder
+    partial class ViewOrderForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.dgvOrder = new System.Windows.Forms.DataGridView();
-            this.cbxOrderID = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.detailid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Qty = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cbxStatus = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.cbxOrderID = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrder)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,6 +52,27 @@
             this.dgvOrder.Size = new System.Drawing.Size(651, 280);
             this.dgvOrder.TabIndex = 0;
             this.dgvOrder.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.dgvOrder_EditingControlShowing);
+            // 
+            // detailid
+            // 
+            this.detailid.HeaderText = "detailid";
+            this.detailid.Name = "detailid";
+            this.detailid.Visible = false;
+            // 
+            // menu
+            // 
+            this.menu.HeaderText = "Menu";
+            this.menu.Name = "menu";
+            // 
+            // Qty
+            // 
+            this.Qty.HeaderText = "Qty";
+            this.Qty.Name = "Qty";
+            // 
+            // cbxStatus
+            // 
+            this.cbxStatus.HeaderText = "Status";
+            this.cbxStatus.Name = "cbxStatus";
             // 
             // cbxOrderID
             // 
@@ -75,33 +96,12 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(205, 49);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(91, 30);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(228, 25);
+            this.label2.Size = new System.Drawing.Size(519, 55);
             this.label2.TabIndex = 3;
             this.label2.Text = "FORM VIEW ORDERS";
-            // 
-            // detailid
-            // 
-            this.detailid.HeaderText = "detailid";
-            this.detailid.Name = "detailid";
-            this.detailid.Visible = false;
-            // 
-            // menu
-            // 
-            this.menu.HeaderText = "Menu";
-            this.menu.Name = "menu";
-            // 
-            // Qty
-            // 
-            this.Qty.HeaderText = "Qty";
-            this.Qty.Name = "Qty";
-            // 
-            // cbxStatus
-            // 
-            this.cbxStatus.HeaderText = "Status";
-            this.cbxStatus.Name = "cbxStatus";
             // 
             // ViewOrder
             // 

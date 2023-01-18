@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace RestaurantEsemka
 {
-    public partial class Order : Form
+    public partial class OrderForm : Form
     {
         string targetDir;
         string windowsUsername = Environment.UserName;
@@ -19,7 +19,7 @@ namespace RestaurantEsemka
         List<string> addedMenu = new List<string>();
         List<string> detailOrderQueries = new List<string>();
 
-        public Order()
+        public OrderForm()
         {
             string orderid = getOrderID();
             InitializeComponent();
@@ -117,25 +117,13 @@ namespace RestaurantEsemka
 
         private void btnOrder_Click(object sender, EventArgs e)
         {
-            if (dgvOrder.Rows.Count < 1)
-            {
-                MessageBox.Show("Add an order from the table above first!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
             string orderid = getOrderID();
-            string year = DateTime.Now.ToString("yyyy");
-            string month = DateTime.Now.ToString("MM");
-            if (!IncomeManager.monthEntryExists(year, month))
-            {
-                IncomeManager.newEntry(year, month);
-            } 
-            IncomeManager.updateEntry(year, month, lblTotal.Text);
             Helper.runQuery("insert into headorder values('" + orderid + "', '" + Vars.employeeID + "', '" + Vars.memberID + "', '" + DateTime.Now.ToString("yyyy-MM-dd") + "', '0', '0')");
             foreach (string s in detailOrderQueries)
             {
                 Helper.runQuery(s);
             }
-            MessageBox.Show(orderid);
+            MessageBox.Show(orderid, "This is your order's id", MessageBoxButtons.OK, MessageBoxIcon.Information);
             dgvOrder.Rows.Clear();
             lblTotal.Text = "0";
         }

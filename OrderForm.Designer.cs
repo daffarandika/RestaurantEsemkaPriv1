@@ -1,6 +1,6 @@
 ﻿namespace RestaurantEsemka
 {
-    partial class Order
+    partial class OrderForm
     {
         /// <summary>
         /// Required designer variable.
@@ -42,6 +42,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lblTotal = new System.Windows.Forms.Label();
             this.btnOrder = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrder)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbFood)).BeginInit();
@@ -50,7 +51,7 @@
             // dgvMenu
             // 
             this.dgvMenu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMenu.Location = new System.Drawing.Point(12, 12);
+            this.dgvMenu.Location = new System.Drawing.Point(12, 81);
             this.dgvMenu.Name = "dgvMenu";
             this.dgvMenu.Size = new System.Drawing.Size(604, 150);
             this.dgvMenu.TabIndex = 0;
@@ -59,7 +60,7 @@
             // dgvOrder
             // 
             this.dgvOrder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvOrder.Location = new System.Drawing.Point(12, 329);
+            this.dgvOrder.Location = new System.Drawing.Point(12, 398);
             this.dgvOrder.Name = "dgvOrder";
             this.dgvOrder.Size = new System.Drawing.Size(604, 150);
             this.dgvOrder.TabIndex = 1;
@@ -67,7 +68,7 @@
             // 
             // pbFood
             // 
-            this.pbFood.Location = new System.Drawing.Point(451, 175);
+            this.pbFood.Location = new System.Drawing.Point(451, 244);
             this.pbFood.Name = "pbFood";
             this.pbFood.Size = new System.Drawing.Size(157, 136);
             this.pbFood.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -76,7 +77,7 @@
             // 
             // tbQty
             // 
-            this.tbQty.Location = new System.Drawing.Point(95, 252);
+            this.tbQty.Location = new System.Drawing.Point(95, 321);
             this.tbQty.Name = "tbQty";
             this.tbQty.Size = new System.Drawing.Size(298, 20);
             this.tbQty.TabIndex = 21;
@@ -84,7 +85,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(20, 226);
+            this.label4.Location = new System.Drawing.Point(20, 295);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(31, 13);
             this.label4.TabIndex = 20;
@@ -94,7 +95,7 @@
             // tbPrice
             // 
             this.tbPrice.Enabled = false;
-            this.tbPrice.Location = new System.Drawing.Point(95, 226);
+            this.tbPrice.Location = new System.Drawing.Point(95, 295);
             this.tbPrice.Name = "tbPrice";
             this.tbPrice.Size = new System.Drawing.Size(298, 20);
             this.tbPrice.TabIndex = 19;
@@ -103,7 +104,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(20, 252);
+            this.label3.Location = new System.Drawing.Point(20, 321);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(23, 13);
             this.label3.TabIndex = 18;
@@ -112,7 +113,7 @@
             // tbName
             // 
             this.tbName.Enabled = false;
-            this.tbName.Location = new System.Drawing.Point(95, 201);
+            this.tbName.Location = new System.Drawing.Point(95, 270);
             this.tbName.Name = "tbName";
             this.tbName.Size = new System.Drawing.Size(298, 20);
             this.tbName.TabIndex = 17;
@@ -120,7 +121,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(20, 204);
+            this.label2.Location = new System.Drawing.Point(20, 273);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(35, 13);
             this.label2.TabIndex = 16;
@@ -128,7 +129,7 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(95, 287);
+            this.btnAdd.Location = new System.Drawing.Point(95, 356);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(75, 23);
             this.btnAdd.TabIndex = 24;
@@ -138,7 +139,7 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(190, 288);
+            this.btnCancel.Location = new System.Drawing.Point(190, 357);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 25;
@@ -150,7 +151,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(447, 501);
+            this.label1.Location = new System.Drawing.Point(437, 570);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(52, 20);
             this.label1.TabIndex = 26;
@@ -160,7 +161,7 @@
             // 
             this.lblTotal.AutoSize = true;
             this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotal.Location = new System.Drawing.Point(497, 501);
+            this.lblTotal.Location = new System.Drawing.Point(487, 570);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(18, 20);
             this.lblTotal.TabIndex = 27;
@@ -168,7 +169,7 @@
             // 
             // btnOrder
             // 
-            this.btnOrder.Location = new System.Drawing.Point(95, 498);
+            this.btnOrder.Location = new System.Drawing.Point(85, 567);
             this.btnOrder.Name = "btnOrder";
             this.btnOrder.Size = new System.Drawing.Size(75, 23);
             this.btnOrder.TabIndex = 28;
@@ -176,11 +177,22 @@
             this.btnOrder.UseVisualStyleBackColor = true;
             this.btnOrder.Click += new System.EventHandler(this.btnOrder_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(180, 9);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(281, 55);
+            this.label5.TabIndex = 29;
+            this.label5.Text = "Menu Order";
+            // 
             // Order
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(644, 534);
+            this.ClientSize = new System.Drawing.Size(630, 628);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.btnOrder);
             this.Controls.Add(this.lblTotal);
             this.Controls.Add(this.label1);
@@ -223,5 +235,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.Button btnOrder;
+        private System.Windows.Forms.Label label5;
     }
 }

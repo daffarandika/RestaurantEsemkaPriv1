@@ -33,6 +33,7 @@
             this.cbxBank = new System.Windows.Forms.ComboBox();
             this.btnSave = new System.Windows.Forms.Button();
             this.tbCardNumber = new System.Windows.Forms.TextBox();
+            this.btnKuitansi = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -78,10 +79,21 @@
             this.tbCardNumber.Size = new System.Drawing.Size(193, 20);
             this.tbCardNumber.TabIndex = 5;
             // 
+            // btnKuitansi
+            // 
+            this.btnKuitansi.Location = new System.Drawing.Point(168, 59);
+            this.btnKuitansi.Name = "btnKuitansi";
+            this.btnKuitansi.Size = new System.Drawing.Size(75, 23);
+            this.btnKuitansi.TabIndex = 6;
+            this.btnKuitansi.Text = "Kuitansi";
+            this.btnKuitansi.UseVisualStyleBackColor = true;
+            this.btnKuitansi.Click += new System.EventHandler(this.btnKuitansi_Click);
+            // 
             // NonTunaiUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnKuitansi);
             this.Controls.Add(this.tbCardNumber);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.cbxBank);
@@ -102,5 +114,6 @@
         private System.Windows.Forms.ComboBox cbxBank;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.TextBox tbCardNumber;
+        private System.Windows.Forms.Button btnKuitansi;
     }
 }

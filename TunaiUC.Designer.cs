@@ -44,6 +44,7 @@
             this.btnKuitansi.TabIndex = 18;
             this.btnKuitansi.Text = "Kuitansi";
             this.btnKuitansi.UseVisualStyleBackColor = true;
+            this.btnKuitansi.Click += new System.EventHandler(this.btnKuitansi_Click);
             // 
             // tbnSave
             // 

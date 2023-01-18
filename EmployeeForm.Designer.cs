@@ -1,6 +1,6 @@
 ﻿namespace RestaurantEsemka
 {
-    partial class Employee
+    partial class EmployeeForm
     {
         /// <summary>
         /// Required designer variable.
@@ -44,22 +44,23 @@
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmp)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvEmp
             // 
             this.dgvEmp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEmp.Location = new System.Drawing.Point(12, 12);
+            this.dgvEmp.Location = new System.Drawing.Point(23, 63);
             this.dgvEmp.Name = "dgvEmp";
-            this.dgvEmp.Size = new System.Drawing.Size(519, 288);
+            this.dgvEmp.Size = new System.Drawing.Size(519, 239);
             this.dgvEmp.TabIndex = 0;
             this.dgvEmp.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEmp_CellClick);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(22, 325);
+            this.label1.Location = new System.Drawing.Point(33, 327);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(67, 13);
             this.label1.TabIndex = 1;
@@ -67,7 +68,7 @@
             // 
             // tbID
             // 
-            this.tbID.Location = new System.Drawing.Point(95, 318);
+            this.tbID.Location = new System.Drawing.Point(106, 320);
             this.tbID.Name = "tbID";
             this.tbID.Size = new System.Drawing.Size(436, 20);
             this.tbID.TabIndex = 2;
@@ -75,14 +76,14 @@
             // cbxPosition
             // 
             this.cbxPosition.FormattingEnabled = true;
-            this.cbxPosition.Location = new System.Drawing.Point(95, 448);
+            this.cbxPosition.Location = new System.Drawing.Point(106, 450);
             this.cbxPosition.Name = "cbxPosition";
             this.cbxPosition.Size = new System.Drawing.Size(436, 21);
             this.cbxPosition.TabIndex = 3;
             // 
             // tbName
             // 
-            this.tbName.Location = new System.Drawing.Point(95, 344);
+            this.tbName.Location = new System.Drawing.Point(106, 346);
             this.tbName.Name = "tbName";
             this.tbName.Size = new System.Drawing.Size(436, 20);
             this.tbName.TabIndex = 5;
@@ -90,7 +91,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(22, 347);
+            this.label2.Location = new System.Drawing.Point(33, 349);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(35, 13);
             this.label2.TabIndex = 4;
@@ -98,7 +99,7 @@
             // 
             // tbEmail
             // 
-            this.tbEmail.Location = new System.Drawing.Point(95, 370);
+            this.tbEmail.Location = new System.Drawing.Point(106, 372);
             this.tbEmail.Name = "tbEmail";
             this.tbEmail.Size = new System.Drawing.Size(436, 20);
             this.tbEmail.TabIndex = 7;
@@ -106,7 +107,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(22, 373);
+            this.label3.Location = new System.Drawing.Point(33, 375);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(32, 13);
             this.label3.TabIndex = 6;
@@ -114,7 +115,7 @@
             // 
             // tbPassword
             // 
-            this.tbPassword.Location = new System.Drawing.Point(95, 396);
+            this.tbPassword.Location = new System.Drawing.Point(106, 398);
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.Size = new System.Drawing.Size(436, 20);
             this.tbPassword.TabIndex = 9;
@@ -122,7 +123,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(22, 399);
+            this.label4.Location = new System.Drawing.Point(33, 401);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(53, 13);
             this.label4.TabIndex = 8;
@@ -130,7 +131,7 @@
             // 
             // tbHandphone
             // 
-            this.tbHandphone.Location = new System.Drawing.Point(95, 422);
+            this.tbHandphone.Location = new System.Drawing.Point(106, 424);
             this.tbHandphone.Name = "tbHandphone";
             this.tbHandphone.Size = new System.Drawing.Size(436, 20);
             this.tbHandphone.TabIndex = 11;
@@ -138,7 +139,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(22, 425);
+            this.label5.Location = new System.Drawing.Point(33, 427);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(63, 13);
             this.label5.TabIndex = 10;
@@ -146,7 +147,7 @@
             // 
             // btnInsert
             // 
-            this.btnInsert.Location = new System.Drawing.Point(94, 475);
+            this.btnInsert.Location = new System.Drawing.Point(105, 477);
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.Size = new System.Drawing.Size(75, 23);
             this.btnInsert.TabIndex = 12;
@@ -156,7 +157,7 @@
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(186, 475);
+            this.btnUpdate.Location = new System.Drawing.Point(197, 477);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(75, 23);
             this.btnUpdate.TabIndex = 13;
@@ -166,7 +167,7 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(273, 475);
+            this.btnDelete.Location = new System.Drawing.Point(284, 477);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(75, 23);
             this.btnDelete.TabIndex = 14;
@@ -177,11 +178,21 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(22, 451);
+            this.label6.Location = new System.Drawing.Point(33, 453);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(44, 13);
             this.label6.TabIndex = 15;
             this.label6.Text = "Position";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(99, 9);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(366, 37);
+            this.label7.TabIndex = 16;
+            this.label7.Text = "Form Manage Employee";
             // 
             // Employee
             // 
@@ -189,6 +200,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(554, 537);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnUpdate);
@@ -233,5 +245,6 @@
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
     }
 }

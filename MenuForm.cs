@@ -11,14 +11,14 @@ using System.Windows.Forms;
 
 namespace RestaurantEsemka
 {
-    public partial class Menu : Form
+    public partial class MenuForm : Form
     {
         string windowsUsername = Environment.UserName;
         string targetDir;
         string FileName;
         TextBox[] inputFields;
         bool changeImage = false;
-        public Menu()
+        public MenuForm()
         {
             InitializeComponent();
             targetDir = @"C:\Users\" + windowsUsername + @"\Desktop\Restaurant Esemka\Images";

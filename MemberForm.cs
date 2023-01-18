@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace RestaurantEsemka
 {
-    public partial class Member : Form
+    public partial class MemberForm : Form
     {
         TextBox[] inputFields;
-        public Member()
+        public MemberForm()
         {
             InitializeComponent();
             inputFields = new TextBox  []

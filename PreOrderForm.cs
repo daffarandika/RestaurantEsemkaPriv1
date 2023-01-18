@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace RestaurantEsemka
 {
-    public partial class PreOrder : Form
+    public partial class PreOrderForm : Form
     {
-        public PreOrder()
+        public PreOrderForm()
         {
             InitializeComponent();
         }

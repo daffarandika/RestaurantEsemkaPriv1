@@ -11,6 +11,7 @@ namespace RestaurantEsemka
     {
         public static string employeeID = "";
         public static string employeeRole = "";
+        public static string employeeName = "";
         public static string memberID = "";
         public static string connectionString = "Data Source=DESKTOP-GHNE639;Initial Catalog=RestaurantDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
         public static string phoneNumberRegex = @"^\d{1,13}$";
