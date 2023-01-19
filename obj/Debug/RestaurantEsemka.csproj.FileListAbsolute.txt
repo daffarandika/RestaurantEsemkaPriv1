@@ -21,3 +21,5 @@ C:\Users\ASUS\source\repos\RestaurantEsemka\obj\Debug\RestaurantEsemka.PreOrderF
 C:\Users\ASUS\source\repos\RestaurantEsemka\obj\Debug\RestaurantEsemka.ReportForm.resources
 C:\Users\ASUS\source\repos\RestaurantEsemka\obj\Debug\RestaurantEsemka.ViewOrderForm.resources
 C:\Users\ASUS\source\repos\RestaurantEsemka\obj\Debug\RestaurantEsemka.Kuitansi.resources
+C:\Users\ASUS\source\repos\RestaurantEsemka\obj\Debug\RestaurantEsemka.EmployeeInsertForm.resources
+C:\Users\ASUS\source\repos\RestaurantEsemka\obj\Debug\RestaurantEsemka.EmployeeUpdateForm.resources

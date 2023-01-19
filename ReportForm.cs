@@ -36,8 +36,8 @@ namespace RestaurantEsemka
                         string month = new DateTime(DateTime.Now.Year, i, 1).ToString("MMM");
                         string dateFrom = new DateTime(DateTime.Now.Year, i, 1).ToString("yyyy-MM-dd");
                         string dateTo = new DateTime(DateTime.Now.Year, i, DateTime.DaysInMonth(DateTime.Now.Year, Convert.ToInt32(i))).ToString("yyyy-MM-dd");
-                        string subquery = "(select sum(price * qty) from detailorder where _orderid in" +
-                            "(select _orderid from headorder where date >= '" + dateFrom + "'and date <= '" + dateTo + "')) as '" + month + "'";
+                        string subquery = "(select sum(price * qty) from detailorder where orderid in" +
+                            "(select orderid from headorder where date >= '" + dateFrom + "'and date <= '" + dateTo + "')) as '" + month + "'";
                         subqueries.Add(subquery);
                     }
                     query += string.Join(", ", subqueries.ToArray());
@@ -65,7 +65,7 @@ namespace RestaurantEsemka
                 nums[i] = (i + 1).ToString();
             }
             foreach (int i in Enumerable.Range(0, 12)) {
-                names[i] = new DateTime(DateTime.Now.Year, (i+1), 01 ).ToString("MMM");
+                names[i] = new DateTime(DateTime.Now.Year, (i+1), 01 ).ToString("MMMM");
             }
             cbxFrom.Fill(names, nums);
             cbxTo.Fill(names, nums); }

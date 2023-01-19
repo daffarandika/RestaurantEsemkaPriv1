@@ -39,8 +39,8 @@ namespace RestaurantEsemka
                 ep.SetError(cbxBank, "Input fields cannot be empty");
             }
             Helper.runQuery("update headorder set payment = '" + payment + "', bank = '"+cbxBank.Text+"' where orderid = '"+ orderID +"'");
-            MessageBox.Show("Transaction has been completed", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             btnKuitansi_Click(sender, e);
+            MessageBox.Show("Transaction has been completed", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             reset();
         }
 

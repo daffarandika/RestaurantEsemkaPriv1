@@ -53,6 +53,18 @@
     <Compile Include="EmployeeForm.Designer.cs">
       <DependentUpon>EmployeeForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="EmployeeInsertForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeInsertForm.Designer.cs">
+      <DependentUpon>EmployeeInsertForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeUpdateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeUpdateForm.Designer.cs">
+      <DependentUpon>EmployeeUpdateForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Extensions.cs" />
     <Compile Include="Helper.cs" />
     <Compile Include="KuitansiForm.cs">
@@ -133,6 +145,12 @@
     <EmbeddedResource Include="EmployeeForm.resx">
       <DependentUpon>EmployeeForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeInsertForm.resx">
+      <DependentUpon>EmployeeInsertForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeUpdateForm.resx">
+      <DependentUpon>EmployeeUpdateForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="KuitansiForm.resx">
       <DependentUpon>KuitansiForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -190,6 +208,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
