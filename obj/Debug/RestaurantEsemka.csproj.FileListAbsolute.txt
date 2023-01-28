@@ -12,7 +12,6 @@ C:\Users\ASUS\source\repos\RestaurantEsemka\obj\Debug\RestaurantEsemka.exe
 C:\Users\ASUS\source\repos\RestaurantEsemka\obj\Debug\RestaurantEsemka.pdb
 C:\Users\ASUS\source\repos\RestaurantEsemka\obj\Debug\RestaurantEsemka.EmployeeForm.resources
 C:\Users\ASUS\source\repos\RestaurantEsemka\obj\Debug\RestaurantEsemka.LoginForm.resources
-C:\Users\ASUS\source\repos\RestaurantEsemka\obj\Debug\RestaurantEsemka.MainForm.resources
 C:\Users\ASUS\source\repos\RestaurantEsemka\obj\Debug\RestaurantEsemka.MemberForm.resources
 C:\Users\ASUS\source\repos\RestaurantEsemka\obj\Debug\RestaurantEsemka.MenuForm.resources
 C:\Users\ASUS\source\repos\RestaurantEsemka\obj\Debug\RestaurantEsemka.OrderForm.resources
