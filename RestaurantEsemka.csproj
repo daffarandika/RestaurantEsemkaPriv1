@@ -47,6 +47,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminNavigationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminNavigationForm.Designer.cs">
+      <DependentUpon>AdminNavigationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CashierNavigationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CashierNavigationForm.Designer.cs">
+      <DependentUpon>CashierNavigationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChefNavigationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChefNavigationForm.Designer.cs">
+      <DependentUpon>ChefNavigationForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="EmployeeForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +141,12 @@
     <Compile Include="ReportForm.Designer.cs">
       <DependentUpon>ReportForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ResetPasswordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ResetPasswordForm.Designer.cs">
+      <DependentUpon>ResetPasswordForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="TunaiUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -142,6 +166,15 @@
     <Compile Include="ViewOrderForm.Designer.cs">
       <DependentUpon>ViewOrderForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AdminNavigationForm.resx">
+      <DependentUpon>AdminNavigationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CashierNavigationForm.resx">
+      <DependentUpon>CashierNavigationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChefNavigationForm.resx">
+      <DependentUpon>ChefNavigationForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EmployeeForm.resx">
       <DependentUpon>EmployeeForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -189,6 +222,9 @@
     </Compile>
     <EmbeddedResource Include="ReportForm.resx">
       <DependentUpon>ReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResetPasswordForm.resx">
+      <DependentUpon>ResetPasswordForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TunaiUC.resx">
       <DependentUpon>TunaiUC.cs</DependentUpon>

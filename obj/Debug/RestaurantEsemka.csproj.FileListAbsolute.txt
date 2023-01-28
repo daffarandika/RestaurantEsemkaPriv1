@@ -23,3 +23,7 @@ C:\Users\ASUS\source\repos\RestaurantEsemka\obj\Debug\RestaurantEsemka.ViewOrder
 C:\Users\ASUS\source\repos\RestaurantEsemka\obj\Debug\RestaurantEsemka.Kuitansi.resources
 C:\Users\ASUS\source\repos\RestaurantEsemka\obj\Debug\RestaurantEsemka.EmployeeInsertForm.resources
 C:\Users\ASUS\source\repos\RestaurantEsemka\obj\Debug\RestaurantEsemka.EmployeeUpdateForm.resources
+C:\Users\ASUS\source\repos\RestaurantEsemka\obj\Debug\RestaurantEsemka.AdminNavigationForm.resources
+C:\Users\ASUS\source\repos\RestaurantEsemka\obj\Debug\RestaurantEsemka.ResetPasswordForm.resources
+C:\Users\ASUS\source\repos\RestaurantEsemka\obj\Debug\RestaurantEsemka.ChefNavigationForm.resources
+C:\Users\ASUS\source\repos\RestaurantEsemka\obj\Debug\RestaurantEsemka.CashierNavigationForm.resources
