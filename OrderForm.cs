@@ -35,7 +35,7 @@ namespace RestaurantEsemka
             string year = DateTime.Now.ToString("yyyy");
             string monthNum = DateTime.Now.ToString("MM");
             string orderid = year + monthNum + "0001";
-            if (!Helper.hasRows("select * from income"))
+            if (!Helper.hasRows("select * from headorder where orderid >= '" + orderid + "'"))
             {
                 return orderid;
             }
